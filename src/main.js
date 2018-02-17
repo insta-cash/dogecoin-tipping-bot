@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-const dogecoin = require('node-instacash')()
+const instacash = require('node-instacash')()
 
 const settings = require('./settings')
 const Commands = require('./commands')
