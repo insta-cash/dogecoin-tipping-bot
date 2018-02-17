@@ -1,8 +1,8 @@
-const { rateDogeEur } = require('../requests')
+const { rateICHEur } = require('../requests')
 
 function rate (message) {
-  rateDogeEur().then((rate) => {
-    message.channel.send('1 DGE = ' + rate + ' EUR')
+  rateICHEur().then((rate) => {
+    message.channel.send('1 ICH = ' + rate + ' EUR')
   }).catch((error) => {
     message.channel.send(error)
   })
