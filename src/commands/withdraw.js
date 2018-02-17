@@ -1,13 +1,13 @@
 const { OOPS_TEXT } = require('../messages')
 
-const WITHDRAW_TEXT = 'Wow. Successful withdrawal.'
+const WITHDRAW_TEXT = 'Successful withdrawal.'
 const PROPER_AMOUNT_TEXT = 'You need provide a proper amount to be send.'
 const NO_COMMA_TEXT = 'Please avoid "," in your amount and use "."'
 const NEED_ADDRESS_TEXT = 'Need an address as a third argument'
-const NO_FUNDS = 'You dont have doge to transfer.'
-const NOT_ENOUGH_FUNDS = 'Not enough funds for this transfer. Please add some dogecoins.'
+const NO_FUNDS = 'You dont have ich to transfer.'
+const NOT_ENOUGH_FUNDS = 'Not enough funds for this transfer. Please add some instacash.'
 
-function withdraw (message, dogecoinNode, amount, toAddress) {
+function withdraw (message, instacashNode, amount, toAddress) {
   var amountInt = parseInt(amount)
   if (!amountInt) {
     message.reply(PROPER_AMOUNT_TEXT)
@@ -27,7 +27,7 @@ function withdraw (message, dogecoinNode, amount, toAddress) {
 
   var fromAccount = message.author.tag.replace('#', '')
 
-  dogecoinNode.getBalance(fromAccount, function (err, balance) {
+  instacashNode.getBalance(fromAccount, function (err, balance) {
     if (err) {
       console.log(err)
       message.channel.send(OOPS_TEXT)
@@ -45,7 +45,7 @@ function withdraw (message, dogecoinNode, amount, toAddress) {
       return
     }
 
-    dogecoinNode.sendfrom(fromAccount, toAddress, amountInt, function (err, result) {
+    instacashNode.sendfrom(fromAccount, toAddress, amountInt, function (err, result) {
       if (err) {
         console.log(err)
         message.channel.send(OOPS_TEXT)
