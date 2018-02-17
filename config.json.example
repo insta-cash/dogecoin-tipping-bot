@@ -5,10 +5,10 @@
     "token": "<your-discord-token-here>"
   },
   "rpc": {
-    "host": "<dogecoin-ip-address>",
-    "port": 44555,
-    "user": "<dogecoin-rpc-user-here>",
-    "password": "<dogecoin-rpc-password-here>"
+    "host": "<instacash-ip-address>",
+    "port": 46201,
+    "user": "<instacash-rpc-user-here>",
+    "password": "<instacash-rpc-password-here>"
   },
   "giphy": {
     "key": "<your-giphy-api-key-here>"
