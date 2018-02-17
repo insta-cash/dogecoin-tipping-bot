@@ -1,12 +1,12 @@
 const { OOPS_TEXT } = require('../messages')
 
-const TIP_TEXT = 'Wow. Much coins.'
+const TIP_TEXT = 'Thank you for tipping ICH!'
 const PROPER_AMOUNT_TEXT = 'You need provide a proper amount to be send.'
 const NO_COMMA_TEXT = 'Please avoid "," in your amount and use "."'
 const NEED_USER_TEXT = 'Need a user as a third argument'
-const NOT_ENOUGH_FUNDS = 'Not enough funds for this transfer. Please add some dogecoins.'
+const NOT_ENOUGH_FUNDS = 'Not enough funds for this transfer. Please add some instacash'
 
-function tip (message, dogecoinNode, amount) {
+function tip (message, instacashNode, amount) {
   var to = message.mentions.users.first()
 
   if (!to) {
@@ -30,7 +30,7 @@ function tip (message, dogecoinNode, amount) {
   var fromAccount = message.author.tag.replace('#', '')
   var toAccount = to.username + to.discriminator
 
-  dogecoinNode.getBalance(fromAccount, function (err, balance) {
+  instacashNode.getBalance(fromAccount, function (err, balance) {
     if (err) {
       console.log(err)
       message.channel.send(OOPS_TEXT)
@@ -43,7 +43,7 @@ function tip (message, dogecoinNode, amount) {
       return
     }
 
-    dogecoinNode.move(fromAccount, toAccount, amountInt, function (err, result) {
+    instacashNode.move(fromAccount, toAccount, amountInt, function (err, result) {
       if (err) {
         console.log(err)
         message.channel.send(OOPS_TEXT)
