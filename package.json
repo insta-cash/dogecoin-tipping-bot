@@ -1,7 +1,7 @@
 {
-  "name": "dogecoin-tipping-bot",
+  "name": "instacash-tipping-bot",
   "version": "0.0.1",
-  "description": "Dogecoin tipping bot",
+  "description": "Instacash tipping bot",
   "main": "src/main.js",
   "private": true,
   "scripts": {
@@ -11,17 +11,17 @@
     "test": "echo \"I will write some... One day...\" && exit 0"
   },
   "keywords": [
-    "dogecoin",
+    "instacash",
     "discord",
     "tipping"
   ],
-  "author": "Me",
+  "author": "RedVoid",
   "license": "ISC",
   "dependencies": {
     "bitcoinjs-lib": "2.3.0",
     "discord.js": "^11.2.1",
     "dotenv": "^4.0.0",
-    "node-dogecoin": "^0.3.9",
+    "node-instacash": "^0.3.9",
     "request": "^2.81.0"
   },
   "devDependencies": {
