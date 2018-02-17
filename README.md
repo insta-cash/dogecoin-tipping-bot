@@ -1,6 +1,6 @@
-## Dogecoin Tipping Bot for Discord
+## ICH Tipping Bot for Discord
 
-Allow you tip dogecoin in your discord chat.
+Allow you tip ich in your discord chat.
 
 ### Development
 
@@ -35,9 +35,6 @@ Then launch your bot with `npm run dev` and prey God Shiba Inu !
 
 Go on the dev/test channel and test your code
 
-#### Dogecoind RPC username/password/hostname
+#### instacashd RPC username/password/hostname
 
-Ask Lola.
-
-
-And we're done...
+Ask @CORE TEAM
