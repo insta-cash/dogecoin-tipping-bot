@@ -1,4 +1,4 @@
 module.exports = {
-  OOPS_TEXT: 'Oops ! Something went wrong. Contact Lola.',
-  QRCODE_TEXT: 'Hey people, send me much money ! Love you <3'
+  OOPS_TEXT: 'Oops ! Something went wrong. Contact RedVoid',
+  QRCODE_TEXT: 'Scan QT and Send ICH'
 }
