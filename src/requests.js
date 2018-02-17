@@ -3,7 +3,7 @@ const { RATE_URL } = require('./constants')
 const { OOPS_TEXT } = require('./messages')
 
 /**
- * Give the rate of one dogecoin in euro.
+ * Give the rate of one instacash in euro.
  * @return rate
  **/
 function rateDogeEur () {
