@@ -31,7 +31,7 @@ You should see your bot under `offline`.
 
 Go in your working directory and launch `npm install` to load dependencies
 
-Then launch your bot with `npm run dev` and prey God Shiba Inu !
+Then launch your bot with `npm run dev` !
 
 Go on the dev/test channel and test your code
 
