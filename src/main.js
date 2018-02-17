@@ -32,10 +32,10 @@ client.on('message', message => {
         Commands.help(message)
         break
       case 'tip':
-        Commands.tip(message, dogecoin, args[2])
+        Commands.tip(message, instacash, args[2])
         break
       case 'balance':
-        Commands.balance(message, dogecoin)
+        Commands.balance(message, instacash)
         break
       case 'rate':
         Commands.rate(message)
