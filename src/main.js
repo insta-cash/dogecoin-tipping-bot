@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-const dogecoin = require('node-dogecoin')()
+const dogecoin = require('node-instacash')()
 
 const settings = require('./settings')
 const Commands = require('./commands')
@@ -7,14 +7,13 @@ const Commands = require('./commands')
 // Init the Discord client
 const client = new Discord.Client()
 
-const giphyApiKey = settings.GIPHY_KEY
 
 // Set our dogecoin node IP and port
-dogecoin.set('host', settings.RPC_HOST)
-dogecoin.set('port', settings.RPC_PORT)
+instacash.set('host', settings.RPC_HOST)
+instacash.set('port', settings.RPC_PORT)
 
 // Register auth value
-dogecoin.auth(settings.RPC_USER, settings.RPC_PASSWORD)
+instacash.auth(settings.RPC_USER, settings.RPC_PASSWORD)
 
 client.on('ready', () => {
   console.log('I am ready!')
@@ -49,11 +48,6 @@ client.on('message', message => {
         break
       case 'adopt':
         message.reply('Wow wow')
-        break
-      case 'goodboy':
-        if (giphyApiKey !== null && giphyApiKey !== '') {
-          Commands.goodboy(message, giphyApiKey)
-        }
         break
       case 'qrcode':
         Commands.qrcode(message, dogecoin, Discord)
