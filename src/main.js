@@ -41,16 +41,16 @@ client.on('message', message => {
         Commands.rate(message)
         break
       case 'address':
-        Commands.address(message, dogecoin)
+        Commands.address(message, instacash)
         break
       case 'withdraw':
-        Commands.withdraw(message, dogecoin, args[2], args[3])
+        Commands.withdraw(message, instacash, args[2], args[3])
         break
       case 'adopt':
         message.reply('Wow wow')
         break
       case 'qrcode':
-        Commands.qrcode(message, dogecoin, Discord)
+        Commands.qrcode(message, instacash, Discord)
         break
       default:
         message.reply('pong')
