@@ -1,11 +1,11 @@
 const { OOPS_TEXT, QRCODE_TEXT } = require('../messages')
 
-function qrcode (message, dogecoinNode, Discord) {
+function qrcode (message, instacashNode, Discord) {
   // Transform account to recover address
   let account = message.author.tag.replace('#', '')
 
   // Call dogecoin node to have the public address
-  dogecoinNode.getAccountAddress(account, function (err, address) {
+  instacashNode.getAccountAddress(account, function (err, address) {
     // Fuck, we've got a problem
     if (err) {
       console.log(err)
